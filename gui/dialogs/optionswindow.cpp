@@ -55,7 +55,7 @@ void GUIOptionsWindow::acceptOptions(Button* button, void* lpParam){
 	g_gui->setDialog(NULL);
 }
 
-GUIOptionsWindow::GUIOptionsWindow() : GUIWindow("Advanced Tibria options", 0, 0, 260, 304){
+GUIOptionsWindow::GUIOptionsWindow() : GUIWindow("Advanced Tibia options", 0, 0, 260, 304){
 	pushButton("Cancel", &GUIOptionsWindow::cancelOptions, this, getButtonNextX(), getButtonNextY());
 	pushButton("Ok", &GUIOptionsWindow::acceptOptions, this, getButtonNextX(), getButtonNextY());
 	

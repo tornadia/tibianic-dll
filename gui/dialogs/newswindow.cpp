@@ -14,7 +14,7 @@ void readNews(Button* button, void* param){
 	
 	/* Create link */
 	char buffer[1024];
-	sprintf(buffer, "http://tibria.com/news.php", topic->c_str());
+	sprintf(buffer, "http://tibia.com/news.php", topic->c_str());
 	
 	/* Open website */
 	ShellExecute(NULL, "open", buffer, NULL, NULL, SW_SHOWDEFAULT);
@@ -76,10 +76,10 @@ void GUINewsWindow::tick(uint32_t ticks){
 		case FETCH_CONNECTING: {
 			if(m_connection == NULL){
 				m_connection = new TcpConnection(TcpConnection::CONNECTION_TCP);
-				m_connection->tryconnect("tibria.com", 80);
+				m_connection->tryconnect("tibia.com", 80);
 				
 				char request[1024];
-				sprintf(request, "GET /client_news.php HTTP/1.1\r\nHost: tibria.com\r\n\r\n");
+				sprintf(request, "GET /client_news.php HTTP/1.1\r\nHost: tibia.com\r\n\r\n");
 	
 				m_connection->push(request, strlen(request));
 			}

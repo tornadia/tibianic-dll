@@ -22,7 +22,7 @@ bool httpGet::download(char *url, char *output, bool reload, void (*update)(unsi
 			throw DLExc("internet connection is not available.");
 		}
 
-		hInet = InternetOpen("Tibria Client", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
+		hInet = InternetOpen("Tibia Client", INTERNET_OPEN_TYPE_DIRECT, NULL, NULL, 0);
 		
 		if(hInet == NULL){
 			throw DLExc("failed to open internet connetion.");
