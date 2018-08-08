@@ -1550,11 +1550,13 @@ void LIB::FirstTick(){
     This function will be called only once after the first tick
   */
 
+  // UNCOMMENT TO ENABLE UPDATER
   // Lets create update window
-  m_updateDialog = new GUIUpdateWindow();
+  //m_updateDialog = new GUIUpdateWindow();
   
+  // UNCOMMENT TO ENABLE UPDATER  
   // Lets make it as dialog
-  g_gui->setDialog(m_updateDialog);
+  //g_gui->setDialog(m_updateDialog);
   
   //GUITestDialog* dialog = new GUITestDialog();
   //g_gui->setDialog(dialog);
