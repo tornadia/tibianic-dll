@@ -728,12 +728,14 @@ int _stdcall HookedGetIconSkin(int iconNumber){
         }        
         
         case SKULL_WHITE: {
-          g_lastTmp = 0x0EE;
+          //g_lastTmp = 0x0EE;
+          g_lastTmp = 0x0FA;
           break;
         }
         
         case SKULL_RED: {
-          g_lastTmp = 0x0EF;
+          //g_lastTmp = 0x0EF;
+          g_lastTmp = 0x0FB;
           break;
         }
       }
