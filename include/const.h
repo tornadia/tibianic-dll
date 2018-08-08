@@ -3,14 +3,14 @@
 
 #define PROTOCOL_VERSION 772
 
-#define ERROR_MESSAGE "Tibria client has encountered a problem and needs to close.\r\n"
-#define MESSAGE_TITLE "Tibria"
-#define WINDOW_TITLE "Tibria Client"
+#define ERROR_MESSAGE "Tibia client has encountered a problem and needs to close.\r\n"
+#define MESSAGE_TITLE "Tibia"
+#define WINDOW_TITLE "Tibia Client"
 
-#define UPDATER_URL "http:/\/tibria.com/update/"
-#define MAIN_LIBRARY "Tibria.dll"
-#define MAIN_EXECUTABLE "Tibria.exe"
-#define MAIN_ADVANCED_CONFIG "Tibria.ini"
+#define UPDATER_URL "http:/\/127.0.0.1/update/"
+#define MAIN_LIBRARY "Tibia.dll"
+#define MAIN_EXECUTABLE "Tibia.exe"
+#define MAIN_ADVANCED_CONFIG "Tibia.ini"
 
 #define CAM_EXTENSION "cam"
 
@@ -21,15 +21,15 @@
 
 #define PING_WAIT 2000
 
-#define GLOBAL_LOGIN1 "tibria.com"
-#define GLOBAL_LOGIN2 "tibria.com"
-#define GLOBAL_LOGIN3 "tibria.com"
-#define GLOBAL_LOGIN4 "tibria.com"
+// Change these
+#define GLOBAL_LOGIN1 "127.0.0.1" 
+#define GLOBAL_LOGIN2 "127.0.0.1"
+#define GLOBAL_LOGIN3 "127.0.0.1"
+#define GLOBAL_LOGIN4 "127.0.0.1"
+#define GLOBAL_HOST_PROXY "127.0.0.1"
+#define GLOBAL_HOST "127.0.0.1"
 
-#define GLOBAL_HOST_PROXY "tibria.com"
-#define GLOBAL_HOST "tibria.com"
 #define GLOBAL_HOST_IP "127.0.0.1"
-
 #define GLOBAL_PORT 7171
 
 #define CAM_PLAYER_HOST "127.0.0.1"

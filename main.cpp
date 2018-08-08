@@ -1229,10 +1229,10 @@ void flushCamRecording(bool logout){
   
   std::string str = std::string("Your movie has been saved as ") + filename;
   if(logout){
-    str = str + std::string("\r\nPlease check cam/ directory located in Tibria main directory.");
+    str = str + std::string("\r\nPlease check cam/ directory located in Tibia main directory.");
     ShowMessage(str);
   } else {
-    str = str + std::string("\nPlease check cam/ directory located in Tibria main directory.");
+    str = str + std::string("\nPlease check cam/ directory located in Tibia main directory.");
     Tibia::GUIDialog* dialog = Tibia::CreateTextDialog("Information", str.c_str());
     Tibia::SetCurrentDialog(dialog);
   }
@@ -1378,10 +1378,10 @@ LIB::LIB(){
   // The default host the pinger will ping
   m_pingHost = GLOBAL_HOST;
   
-  // We need the main module name which is the executable name - it could be changed by the player so we need to know what to update if it's not Tibria.exe
+  // We need the main module name which is the executable name - it could be changed by the player so we need to know what to update if it's not Tibia.exe
   char pFile[MAX_PATH];
   if(!GetModuleFileName(GetModuleHandle(NULL), (pFile), MAX_PATH)){
-    m_error = std::string("Tibria client was unable to get current module!");
+    m_error = std::string("Tibia client was unable to get current module!");
   }
   
   m_moduleName = pFile;
@@ -1401,7 +1401,7 @@ LIB::LIB(){
   // Lets create a CAM instance
   cam = new CAM();
   
-  // Main GUI button container - it will take care of main buttons visible in the Tibria menu
+  // Main GUI button container - it will take care of main buttons visible in the Tibia menu
   buttons = new Buttons(75, 58);
   
   // Inventory buttons
@@ -1467,26 +1467,26 @@ void LIB::Initialize(){
   g_rsa->setKey(p, q, d);
   
   if(!crc32(std::string(GAME_DIR) + std::string(MAIN_LIBRARY))){
-    m_error = std::string("Tibria client was unable to load Tibria.dll properly!");
+    m_error = std::string("Tibia client was unable to load Tibia.dll properly!");
   }
   
   if(WSAStartup(MAKEWORD(1, 1), &wsaData) != 0){
-    m_error = std::string("Tibria client was unable to initialize winsock!");
+    m_error = std::string("Tibia client was unable to initialize winsock!");
   }
   
   /* Mutex for anti client */
-  // CreateMutex(NULL, FALSE, "_Tibria");
+  // CreateMutex(NULL, FALSE, "_Tibia");
   
   /* Check last error from creation of the mutex */
   // if(GetLastError() == ERROR_ALREADY_EXISTS){
-  //  m_error = std::string("Tibria client is already running!");
+  //  m_error = std::string("Tibia client is already running!");
   // }
   
   // Lets check if map directory is available, if not - lets create it
   if(!CreateDirectory((MAP_DIR), NULL)){
     DWORD dwError = GetLastError();
     if(dwError != ERROR_ALREADY_EXISTS){
-      m_error = std::string(std::string("Tibria was unable to create ") + std::string(MAP_DIR) + std::string(" directory!"));
+      m_error = std::string(std::string("Tibia was unable to create ") + std::string(MAP_DIR) + std::string(" directory!"));
     }
   }
   
@@ -1494,7 +1494,7 @@ void LIB::Initialize(){
   if(!CreateDirectory((CAM_DIR), NULL)){
     DWORD dwError = GetLastError();
     if(dwError != ERROR_ALREADY_EXISTS){
-      m_error = std::string(std::string("Tibria was unable to create") + std::string(CAM_DIR) + std::string(" directory!"));
+      m_error = std::string(std::string("Tibia was unable to create") + std::string(CAM_DIR) + std::string(" directory!"));
     }
   }
   
@@ -1976,7 +1976,7 @@ void LIB::InitializeHook(){
   HookAsmCall(SET_EXPERIENCE_CALL_ADDRESS, (DWORD)&HookedSetExperience);
   HookAsmCall(PUSH_LETTER_CALL_ADDRESS, (DWORD)&HookedPushLetter);
   
-  //00449458   . 0F84 9E000000  JE Tibria.004494FC
+  //00449458   . 0F84 9E000000  JE Tibia.004494FC
   // printfps jump
   AsmNop(PRINT_FPS_JUMP_ADDRESS, 6);
 }

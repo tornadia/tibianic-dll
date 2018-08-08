@@ -1,4 +1,4 @@
-# Project: OriginalNastarius
+# Project: Tibia
 # Makefile created by Dev-C++ 4.9.9.2
 
 CPP  = g++.exe
@@ -10,22 +10,22 @@ LINKOBJ  = config.o functions.o main.o timer.o tools.o gui/dialogs/newswindow.o 
 LIBS =  -L"C:/Tibia/devcpp/lib" --no-export-all-symbols --add-stdcall-alias -lws2_32 -lgmp -lwinmm -lwininet -lAdvapi32  
 INCS =  -I"C:/Tibia/devcpp/include"  -I"C:/Tibia/tibianic-dll/"  -I"C:/Tibia/tibianic-dll/cam"  -I"C:/Tibia/tibianic-dll/crypt"  -I"C:/Tibia/tibianic-dll/gui"  -I"C:/Tibia/tibianic-dll/include"  -I"C:/Tibia/tibianic-dll/locks"  -I"C:/Tibia/tibianic-dll/network"  -I"C:/Tibia/tibianic-dll/pinger"  -I"C:/Tibia/tibianic-dll/threads"  -I"C:/Tibia/tibianic-dll/gui/elements"  -I"C:/Tibia/tibianic-dll/gui/dialogs" 
 CXXINCS =  -I"C:/Tibia/devcpp/include"  -I"C:/Tibia/tibianic-dll/"  -I"C:/Tibia/tibianic-dll/cam"  -I"C:/Tibia/tibianic-dll/crypt"  -I"C:/Tibia/tibianic-dll/gui"  -I"C:/Tibia/tibianic-dll/include"  -I"C:/Tibia/tibianic-dll/locks"  -I"C:/Tibia/tibianic-dll/network"  -I"C:/Tibia/tibianic-dll/pinger"  -I"C:/Tibia/tibianic-dll/threads"  -I"C:/Tibia/tibianic-dll/gui/elements"  -I"C:/Tibia/tibianic-dll/gui/dialogs" 
-BIN  = Tibria.dll
+BIN  = Tibia.dll
 CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1  
 CFLAGS = $(INCS) -DBUILDING_DLL=1  
 RM = rm -f
 
 .PHONY: all all-before all-after clean clean-custom
 
-all: all-before Tibria.dll all-after
+all: all-before Tibia.dll all-after
 
 
 clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 DLLWRAP=dllwrap.exe
-DEFFILE=libTibria.def
-STATICLIB=libTibria.a
+DEFFILE=libTibia.def
+STATICLIB=libTibia.a
 
 $(BIN): $(LINKOBJ)
 	$(DLLWRAP) --output-def $(DEFFILE) --driver-name c++ --implib $(STATICLIB) $(LINKOBJ) $(LIBS) -o $(BIN)

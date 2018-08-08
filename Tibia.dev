@@ -1,6 +1,6 @@
 [Project]
 FileName=Tibria.dev
-Name=OriginalNastarius
+Name=Tibia
 UnitCount=91
 Type=3
 Ver=1
@@ -18,7 +18,7 @@ Icon=
 ExeOutput=
 ObjectOutput=
 OverrideOutput=1
-OverrideOutputName=Tibria.dll
+OverrideOutputName=Tibia.dll
 HostApplication=
 Folders=cam,crypt,gui,gui/dialogs,gui/elements,include,locks,network,pinger,threads
 CommandLine=

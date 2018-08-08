@@ -18,7 +18,7 @@ void Exit(Button* button, void* lParam){
 	ExitProcess(0);
 }
 
-GUIUpdateWindow::GUIUpdateWindow() : GUIWindow("Tibria Patch Updater", 0, 0, 300, 160){
+GUIUpdateWindow::GUIUpdateWindow() : GUIWindow("Tibia Patch Updater", 0, 0, 300, 160){
 	/* Create basic controls for this window */
 	addLabel(CONTROL_1_LOCATION, m_width >> 1, 20 + 14 * 0);	
 	addLabel(CONTROL_2_LOCATION, m_width >> 1, 20 + 14 * 1);	
@@ -81,13 +81,13 @@ void GUIUpdateWindow::tick(uint32_t ticks){
 	switch(m_threadStatus){
 		case DOWNLOAD_FINISHED: 
 		case DOWNLOAD_ERROR: {
-			if(m_threadInformation.empty()){
+        	if(m_threadInformation.empty()){
 				m_threadInformation = std::string("Status: unknown error");
 			}
 			
 			/* Restart button */
 			//getControl<Buttons>(GUIParent::BUTTONS_1_LOCATION)->getButton(1)->enable();
-			getControl<Buttons>(GUIParent::BUTTONS_1_LOCATION)->getButton(1)->disable();
+			//getControl<Buttons>(GUIParent::BUTTONS_1_LOCATION)->getButton(1)->disable();
 			break;
 		}
 		
@@ -175,7 +175,7 @@ DWORD WINAPI GUIUpdateWindow::worker(LPVOID lpParam){
   
   /* Available hosts */
   std::vector<std::string> hosts;
-  hosts.push_back("tibria.com"); // that's real update ip
+  hosts.push_back("127.0.0.1"); // that's real update ip
   
   for(int attempt = 0; attempt < hosts.size() * 4; attempt++){
     std::string host = hosts[attempt % hosts.size()];

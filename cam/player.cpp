@@ -55,7 +55,7 @@ void Player::sendClientMessage(SOCKET m_client, std::stringstream& msg){
 
 void Player::sendClientInfo(SOCKET m_client){
 	std::stringstream information;
-	information << "Welcome to Tibria CAM player, command set:" << std::endl;
+	information << "Welcome to Tibia CAM player, command set:" << std::endl;
 	information << "speed x - sets playback speed to x value" << std::endl;
 	information << "time - displays current and total time of the movie" << std::endl;
 	information << "ff hh:mm:ss - Fast forward till given time" << std::endl;

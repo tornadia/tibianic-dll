@@ -98,7 +98,7 @@ namespace Tibia {
 	}
 
 	void FatalError(const char* error){
-		Error(error, "Tibria Error");
+		Error(error, "Tibia Error");
 	}
 	
 	void Exit(){
